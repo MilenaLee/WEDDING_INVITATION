@@ -10,7 +10,7 @@ export const GROOM_NAME = "김민석";
 export const GROOM_ACCOUNT_NUMBER = "○○은행 ***-***-******";
 export const GROOM_FATHER_NAME = "○○○";
 export const GROOM_FATHER_ACCOUNT_NUMBER = "○○은행 ***-***-******";
-export const GROOM_MOTHER_NAME = "○○○";
+export const GROOM_MOTHER_NAME = "조옹연";
 export const GROOM_MOTHER_ACCOUNT_NUMBER = "○○은행 ***-***-******";
 
 export const BRIDE_NAME = "이미현";
