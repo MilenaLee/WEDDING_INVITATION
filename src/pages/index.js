@@ -13,6 +13,7 @@ import Location from "../components/location";
 import CongratulatoryMoney from "../components/congratulatoryMoney";
 import Share from "../components/share";
 import Quote from "../components/quote";
+import Comment from "../components/comment";
 import Song from "../assets/song.mp3";
 
 import AOS from "aos";
@@ -54,6 +55,7 @@ const IndexPage = () => {
       <Gallery />
       <Location />
       <Quote />
+      <Comment/>
       <CongratulatoryMoney />
       <Share />
       <Footer
