@@ -13,10 +13,10 @@ const Calendar = () => {
     // D-Day 날짜 지정
     const setDate = new Date("2023-02-04T14:00:00+0900");
     // D-day 날짜의 연,월,일 구하기
-    const setDateYear = setDate.getFullYear();
-    // getMonth 메서드는 0부터 세기 때문에 +1 해준다.
-    const setDateMonth = setDate.getMonth() + 1;
-    const setDateDay = setDate.getDate();
+    // const setDateYear = setDate.getFullYear();
+    // // getMonth 메서드는 0부터 세기 때문에 +1 해준다.
+    // const setDateMonth = setDate.getMonth() + 1;
+    // const setDateDay = setDate.getDate();
 
     // 현재 날짜를 new 연산자를 사용해서 Date 객체를 생성
     const now = new Date();
@@ -29,9 +29,9 @@ const Calendar = () => {
     // 1000*60 => 60초(1분)*60 => 60분(1시간)*24 = 24시간(하루)
     // 나머지 연산자(%)를 이용해서 시/분/초를 구한다.
     const day = Math.floor(distance/(1000*60*60*24));
-    const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
-    const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
-    const seconds = Math.floor((distance % (1000*60))/1000);
+    // const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+    // const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
+    // const seconds = Math.floor((distance % (1000*60))/1000);
 
     // D-Day 날짜를 가져오고,
     // 삼항 연산자를 사용해서 값이 10보다 작을 경우에 대해 조건부 렌더링을 해준다.
@@ -46,6 +46,7 @@ const Calendar = () => {
         <p className="section5-title section5-sub" style={{marginTop: `0`}}>
           2023년 2월 4일 · 토요일 · 오후 2:00</p>
         <table className="wow fadeInUp section5-title section5-table center">
+          <tbody>
           <tr>
             <td className="sun">S</td>
             <td>M</td>
@@ -100,6 +101,7 @@ const Calendar = () => {
             <td>24</td>
             <td>25</td>
           </tr>
+          </tbody>
         </table>
         <p className="wow fadeInUp section5-title section5-sub"
            style={{ marginTop:`1.3em`}}>미현 ❤️ 민석 결혼식이
