@@ -68,3 +68,172 @@
   font-style: normal;
   font-display: swap;
 }
+
+/* 댓글 */
+ section {
+   padding: 2rem 1rem;
+   text-align: center;
+ }
+h2 {
+  font-size: 1.75rem;
+}
+.message-container {
+  min-width: 200px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  font-size: 0.875rem;
+}
+.message-form-text {
+  display: block;
+  width: 100%;
+  height: 5rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #c4c4c4;
+}
+.message-form-subbox {
+  display: flex;
+  flex-flow: row;
+}
+.message-form-input {
+  flex: 1;
+  width: 100%;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid #c4c4c4;
+}
+.message-form-button {
+  padding: 0.5rem 1rem;
+  background: #f65c8a;
+  color: #fff;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+.message-list {
+  min-height: 200px;
+  margin: 1rem 0;
+}
+.message-item-empty {
+  color: gray;
+  padding: 6rem 0;
+}
+.message-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #b6b2a2;
+  text-align: left;
+}
+.message-item-name {
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+.message-item-date {
+  font-size: 0.75rem;
+  color: #8c8c8c;
+}
+.message-item-text {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+.notice {
+  color: gray;
+  padding: 2rem 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 달력 */
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+.section5-title {
+  margin-top: 1em;
+  color: #333;
+  text-shadow: none;
+}
+
+.section5-main {
+  line-height: 1.5em;
+  font-size: 1.1rem;
+}
+
+.section5-sub {
+  line-height: 1.5em;
+  font-size: 1rem;
+}
+
+.section5-table {
+  line-height: 1.5em;
+  font-size: 1rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #F9F6F4;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.section5-table tr td{
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+}
+
+.section5-table tr .sun{
+  color: red;
+}
+
+.section5-table tr .previous-month{
+  opacity:0.5;
+}
+
+.section5-table tr .check{
+  color: white;
+  background-color: chocolate;
+  border-radius: 50px;
+}
+
+.section5-table tr:first-child td{
+  padding-top: 2em;
+}
+
+.section5-table tr:last-child td{
+  padding-bottom: 2em;
+}

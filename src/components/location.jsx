@@ -47,8 +47,8 @@ const Location = () => {
   const executeScript = () => {
     const scriptTag = document.createElement("script");
     const inlineScript = document.createTextNode(`new daum.roughmap.Lander({
-    "timestamp" : "1663593084862",
-    "key" : "2brar",
+    "timestamp" : "1664189618487",
+    "key" : "2bu7q",
     "mapWidth" : "640",
     "mapHeight" : "360"
   }).render();`);
@@ -99,25 +99,32 @@ const Location = () => {
       </Divider>
       <Image src={Flower} />
       <Map
-        id="daumRoughmapContainer1663593084862"
-        className="root_daum_roughmap root_daum_roughmap_landing"
+          id="daumRoughmapContainer1664189618487"
+           className="root_daum_roughmap root_daum_roughmap_landing"
       ></Map>
       <Content>
-        서울 영등포구 국회대로38길 2
+        서울 영등포구 국회대로38길 2 (당산동3가 93-2)
         <br />
         더컨벤션 영등포 1층 그랜드볼룸
         <br />
         <br />
-        <Title>버스 이용시</Title>
+        <Title>자가용 이용시</Title>
         <br />
+        웨딩홀 지하 주차장 1, 2층
         <br />
-        5620, 6631, 6637, 70-3 영등포구청 정류장 하차
+        웨딩홀 맞은편 공영주차장 이용 가능
         <br />
         <br />
         <Title>지하철 이용시</Title>
         <br />
+        2, 5호선 영등포구청역 3번출구 도보 5분
         <br />
-        2호선 영등포구청역 4번 출구 (도보 5분)
+        <br />
+        <Title>버스 이용시</Title>
+        <br />
+        영등포구청역, 영등포경찰서 하차 후 도보이용
+        <br />
+        70-3, 5620, 6631, 6637, 7612, 영등포02, 영등포12
       </Content>
     </Wrapper>
   );

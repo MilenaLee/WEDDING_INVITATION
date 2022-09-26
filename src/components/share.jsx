@@ -73,7 +73,7 @@ const Share = () => {
         container: "#sendKakao",
         content: {
           title: `${GROOM_NAME}❤${BRIDE_NAME} 결혼식에 초대합니다`,
-          description: "아래의 '청첩장 열기' 버튼을 눌러 읽어주세요🤵👰",
+          description: "2023년 2월 4일 토요일 오후 2시 더컨벤션 영등포🤵👰",
           imageUrl: KAKAOTALK_SHARE_IMAGE,
           link: {
             mobileWebUrl: window.location.href,

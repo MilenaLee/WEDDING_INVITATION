@@ -7,8 +7,6 @@ import Flower from "../assets/flower3.png";
 import {
   GROOM_NAME,
   GROOM_ACCOUNT_NUMBER,
-  GROOM_FATHER_NAME,
-  GROOM_FATHER_ACCOUNT_NUMBER,
   GROOM_MOTHER_NAME,
   GROOM_MOTHER_ACCOUNT_NUMBER,
   BRIDE_NAME,
@@ -18,9 +16,9 @@ import {
   BRIDE_MOTHER_NAME,
   BRIDE_MOTHER_ACCOUNT_NUMBER,
 } from "../../config";
+import Comment from "./comment";
 
 const Wrapper = styled.div`
-  padding-top: 42px;
   padding-bottom: 18px;
   width: 70%;
   margin: 0 auto;
@@ -90,6 +88,8 @@ const CongratulatoryMoney = () => {
         <Title>축하의 마음을 전하세요</Title>
       </Divider>
       <Image src={Flower} />
+      <Comment />
+      <Image src={Flower} />
       <Content data-aos="fade-up">
         축하의 마음을 담아 축의금을 전달해 보세요.
       </Content>
@@ -123,19 +123,6 @@ const CongratulatoryMoney = () => {
           </Description>,
         ]}
       >
-        <div>
-          <b>부 : {GROOM_FATHER_NAME}</b>
-          <Divider type="vertical" />
-          <CopyToClipboard text={GROOM_FATHER_ACCOUNT_NUMBER}>
-            <Button
-              type="text"
-              style={{ padding: 0, margin: 0 }}
-              onClick={() => message.success("계좌번호가 복사되었습니다.")}
-            >
-              {GROOM_FATHER_ACCOUNT_NUMBER}
-            </Button>
-          </CopyToClipboard>
-        </div>
         <div style={{ marginTop: 24, marginBottom: 24 }}>
           <b>모 : {GROOM_MOTHER_NAME}</b>
           <Divider type="vertical" />

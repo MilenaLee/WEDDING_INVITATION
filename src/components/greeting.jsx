@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Divider } from "antd";
 import {
   GROOM_NAME,
-  GROOM_FATHER_NAME,
   GROOM_MOTHER_NAME,
   BRIDE_NAME,
   BRIDE_FATHER_NAME,

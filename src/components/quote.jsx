@@ -31,7 +31,7 @@ const Image = styled.img`
   display: block;
   margin: 0 auto;
   width: 1.375rem;
-  padding-bottom: 42px;
+  padding-bottom: 32px;
 `;
 
 const Quote = () => {
@@ -39,6 +39,8 @@ const Quote = () => {
     <Wrapper>
       <Image src={Flower} data-aos="fade-up" />
       <Content data-aos="fade-up">
+        <br />
+        <br />
         장담하건대. 세상이 다 겨울이어도
         <br />
         우리 사랑은 늘봄처럼 따뜻하고
