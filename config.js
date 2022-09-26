@@ -16,3 +16,4 @@ export const BRIDE_FATHER_NAME = "이성우";
 export const BRIDE_FATHER_ACCOUNT_NUMBER = "우리은행 ***-***-******";
 export const BRIDE_MOTHER_NAME = "김수정";
 export const BRIDE_MOTHER_ACCOUNT_NUMBER = "○○은행 ***-***-******";
+
