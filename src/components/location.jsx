@@ -103,7 +103,7 @@ const Location = () => {
            className="root_daum_roughmap root_daum_roughmap_landing"
       ></Map>
       <Content>
-        서울 영등포구 국회대로38길 2 (당산동3가 93-2)
+        서울 영등포구 국회대로38길 2
         <br />
         더컨벤션 영등포 1층 그랜드볼룸
         <br />
@@ -124,7 +124,7 @@ const Location = () => {
         <br />
         영등포구청역, 영등포경찰서 하차 후 도보이용
         <br />
-        70-3, 5620, 6631, 6637, 7612, 영등포02, 영등포12
+        70-3, 5620, 6631, 6637, 7612, 영등포02
       </Content>
     </Wrapper>
   );

@@ -102,8 +102,8 @@ const Calendar = () => {
           </tr>
         </table>
         <p className="wow fadeInUp section5-title section5-sub"
-           style={{ marginTop:`1.3em`}}>미현 ❤️ 민석 결혼식이 <span id="d-day">{getDDay()}</span>
-          남았습니다.</p>
+           style={{ marginTop:`1.3em`}}>미현 ❤️ 민석 결혼식이
+          <br/><span id="d-day">{getDDay()}</span> 남았습니다.</p>
         <br/><br/>
       </div>
       </Wrapper>

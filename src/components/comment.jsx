@@ -27,7 +27,6 @@ const Comment = () => {
     }
   }
 `)
-console.log(data.allCommentsYaml.edges);
   const fields = {'name': '', 'message': ''};
   const enabledSendButton = fields['name'].length > 0 && fields['message'].length > 0;
 // https://www.oscaralsing.com/gatsby-comments-staticman/
