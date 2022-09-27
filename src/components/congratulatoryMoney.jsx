@@ -88,8 +88,6 @@ const CongratulatoryMoney = () => {
         <Title>축하의 마음을 전하세요</Title>
       </Divider>
       <Image src={Flower} />
-      <Comment />
-      <Image src={Flower} />
       <Content data-aos="fade-up">
         축하의 마음을 담아 축의금을 전달해 보세요.
       </Content>
@@ -201,6 +199,8 @@ const CongratulatoryMoney = () => {
           </CopyToClipboard>
         </div>
       </Modal>
+      <Image src={Flower} />
+      <Comment />
     </Wrapper>
   );
 };

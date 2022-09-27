@@ -1,67 +1,65 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 import { useStaticQuery, graphql } from 'gatsby'
 import Moment from 'moment';
 import "moment/locale/ko";
-import axios from "axios";
-import {WEDDING_INVITATION_URL} from "../../config"; // Locale Setting
+import {
+  FIREBASE_API_KEY, FIREBASE_APP_ID,
+  FIREBASE_AUTH_DOMAIN,
+  FIREBASE_MESSAGING_SENDER_ID,
+  FIREBASE_PROJECT_ID,
+  FIREBASE_STORAGE_BUCKET
+} from "../../config"; // Locale Setting
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getFirestore, doc, setDoc, addDoc, collection, getDocs } from "firebase/firestore";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: FIREBASE_API_KEY,
+  authDomain: FIREBASE_AUTH_DOMAIN,
+  projectId: FIREBASE_PROJECT_ID,
+  storageBucket: FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: FIREBASE_MESSAGING_SENDER_ID,
+  appId: FIREBASE_APP_ID
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const dbService = getFirestore(app);
 
 const Comment = () => {
-  const data = useStaticQuery(graphql`
-  {
-    allCommentsYaml {
-      edges {
-        node {
-          id
-          name
-          date
-          message
-        }
-      }
-    }
-  }
-`)
-
-// https://www.oscaralsing.com/gatsby-comments-staticman/
-  // https://github.com/young-do/seohye-s2-youngdo/blob/master/src/components/Cheerup.svelte
-
   const [formValue, setformValue] = React.useState({
     name: '',
-    message: '',
-    email: 'aa@naver.com'
+    message: ''
   });
   const [disabled, setDisabled] = React.useState(false);
+  const [messageArray, setMessageArray] = React.useState([]);
 
   const handleSubmit = async (event) => {
     setDisabled(true);
     event.preventDefault();
-    // store the states in the form data
-    const messageFormData = new URLSearchParams();
-    messageFormData.append("fields[name]", formValue.name)
-    messageFormData.append("fields[message]", formValue.message)
-    messageFormData.append("fields[email]", formValue.email)
 
     try {
-      // make axios post request
-      const response = await axios.post(
-        "https://wedding-invitation-comment.herokuapp.com/v2/entry/MilenaLee/WEDDING_INVITATION/main/comments",
-        messageFormData)
-      .then( res => {
-        console.log(res);
-        if (alert('댓글 등록이 완료되었습니다. 댓글 반영까지 조금만 기다려주세요~') == undefined) {
-          window.location.href = WEDDING_INVITATION_URL;
-        }
-      }).catch(error => {
-        console.log(error);
-        alert('문제가 발생했습니다. 신랑/신부에게 문의 부탁드립니다!');
+      const docRef = await addDoc(collection(dbService, "comment"), {
+        name: formValue.name,
+        message: formValue.message,
+        date: Date.now()
       });
-      console.log(response);
+      console.log("Document written with ID: ", docRef.id);
     } catch (error) {
       console.log(error)
+      alert("문제가 발생했습니다. 신랑/신부에게 문의 바랍니다!")
     }
+    formValue.name = '';
+    formValue.message = '';
 
     setDisabled(false);
+    window.location.reload(false);
   }
 
   const handleChange = (event) => {
@@ -72,6 +70,19 @@ const Comment = () => {
     });
     console.log(formValue);
   }
+
+  useEffect(async () => {
+     // dbService = firebase.firestore();
+
+    const commentCol = collection(dbService, 'comment');
+    const commentSnapshot = await getDocs(commentCol);
+    const docs = commentSnapshot.docs.map(doc => doc.data());
+    docs.sort((a, b) => {
+      return b.date - a.date;
+    })
+    setMessageArray(docs);
+    console.log(messageArray);
+  }, []);
 
   Moment.locale('ko')
   return (
@@ -91,14 +102,13 @@ const Comment = () => {
             <button className="message-form-button" type="submit" disabled={disabled}>등록하기</button>
           </div>
         </form>
-          <span className="message-item-text">댓글 등록 시 시간이 걸릴 수 있습니다. 😅</span>
         <ul className="message-list">
-          {data.allCommentsYaml.edges.map((value, index) => (
+          {messageArray.map((value, index) => (
               <li className="message-item" key={index}>
-                <span className="message-item-name">{value.node.name}</span>
-                <span className="message-item-date">{Moment(value.node.date).format('YYYY-MM-DD HH:mm')}</span>
+                <span className="message-item-name">{value.name}</span>
+                <span className="message-item-date">{Moment(value.date).format('YYYY-MM-DD HH:mm')}</span>
                 <br/>
-                <p className="message-item-text">{value.node.message}</p>
+                <p className="message-item-text">{value.message}</p>
               </li>
           ))}
         </ul>

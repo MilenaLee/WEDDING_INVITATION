@@ -13,7 +13,7 @@ import {
 } from "../../config";
 
 const Wrapper = styled.div`
-  padding-top: 42px;
+  padding-top: 32px;
   width: 100%;
   text-align: center;
 `;
