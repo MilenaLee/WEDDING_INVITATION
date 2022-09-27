@@ -29,7 +29,7 @@ const Content = styled.p`
   font-size: 1rem;
   line-height: 1.75;
   opacity: 0.75;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   width: 100%;
   text-align: center;
 `;
