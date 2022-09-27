@@ -66,8 +66,8 @@ const Title = () => {
   return (
     <Layout>
       <Confetti
-          width={width}
-          height={height}
+          width={width*2}
+          height={height*2}
           numberOfPieces={300}
           gravity={0.2}
           colors={['#FFCDD2', '#F8BBD0', '#D1C4E9']}
