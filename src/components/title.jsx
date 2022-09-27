@@ -6,12 +6,8 @@ import {
   GROOM_NAME,
   BRIDE_NAME,
 } from "../../config.js";
-import BackgroundVideo from "../assets/BackgroundVideo.mp4";
-import GalleryPhoto0 from "../assets/IMG_4139.jpg";
-import {Divider} from "antd";
-import Flower from "../assets/flower2.png";
-import useWindowSize from 'react-use/lib/useWindowSize'
-import Confetti from 'react-confetti'
+import GalleryPhoto0 from "../assets/IMG_4139.jpg";;
+
 
 const Layout = styled.div`
   width: 70%;
@@ -62,7 +58,6 @@ const Image = styled.img`
 
 
 const Title = () => {
-  const { width, height } = useWindowSize()
   return (
     <Layout>
       <TitleWrapper>
@@ -77,15 +72,6 @@ const Title = () => {
         </Schedule>
       </TitleWrapper>
       <Image src={GalleryPhoto0} />
-      <Confetti
-          width={width > 1000? width:1000}
-          height={height > 1000? height: 1000}
-          numberOfPieces={300}
-          gravity={0.2}
-          colors={['#FFCDD2', '#F8BBD0', '#D1C4E9']}
-          recycle={false}
-          style={{ position: 'fixed' }}
-      />
     </Layout>
   );
 };

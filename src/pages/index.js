@@ -17,6 +17,8 @@ import Song from "../assets/song.mp3";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Confetti from "react-confetti";
+import useWindowSize from "react-use/lib/useWindowSize";
 
 // markup
 const { Footer } = Layout;
@@ -82,8 +84,18 @@ const IndexPage = () => {
     });
   });
 
+  const { width, height } = useWindowSize()
   return (
     <Wrapper>
+      <Confetti
+          width={1000}
+          height={1000}
+          numberOfPieces={30}
+          gravity={0.05}
+          colors={['#FFCDD2', '#F8BBD0', '#D1C4E9']}
+          recycle={true}
+          style={{ position: 'fixed' }}
+      />
       <title>미현&민석 결혼해요!</title>
       <AudioDiv onClick={playPause}>
           {audioValue.isPlaying ? "🎶" : "🔇"}
