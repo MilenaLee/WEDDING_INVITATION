@@ -45,6 +45,7 @@ const SubContent = styled.p`
   font-size: 0.875rem;
   line-height: 1.75;
   opacity: 0.75;
+  margin-bottom: 0! important;
 `;
 
 const Description = styled.p`
