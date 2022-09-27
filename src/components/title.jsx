@@ -65,15 +65,6 @@ const Title = () => {
   const { width, height } = useWindowSize()
   return (
     <Layout>
-      <Confetti
-          width={width*2}
-          height={height*2}
-          numberOfPieces={300}
-          gravity={0.2}
-          colors={['#FFCDD2', '#F8BBD0', '#D1C4E9']}
-          recycle={false}
-          style={{ position: 'fixed' }}
-      />
       <TitleWrapper>
         <WeddingInvitation>WEDDING INVITATION</WeddingInvitation>
         <GroomBride>
@@ -86,6 +77,15 @@ const Title = () => {
         </Schedule>
       </TitleWrapper>
       <Image src={GalleryPhoto0} />
+      <Confetti
+          width={width > 1000? width:1000}
+          height={height > 1000? height: 1000}
+          numberOfPieces={300}
+          gravity={0.2}
+          colors={['#FFCDD2', '#F8BBD0', '#D1C4E9']}
+          recycle={false}
+          style={{ position: 'fixed' }}
+      />
     </Layout>
   );
 };

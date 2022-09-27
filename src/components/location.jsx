@@ -30,7 +30,7 @@ const Content = styled.p`
   opacity: 0.75;
   width: 100%;
   text-align: center;
-  padding-top: 42px;
+  padding-top: 22px;
   padding-bottom: 42px;
   margin: 0;
 `;
