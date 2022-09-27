@@ -63,12 +63,10 @@ const Comment = () => {
   }
 
   const handleChange = (event) => {
-    console.log(event);
     setformValue({
       ...formValue,
       [event.target.name]: event.target.value
     });
-    console.log(formValue);
   }
 
   useEffect(async () => {
@@ -81,7 +79,6 @@ const Comment = () => {
       return b.date - a.date;
     })
     setMessageArray(docs);
-    console.log(messageArray);
   }, []);
 
   Moment.locale('ko')
