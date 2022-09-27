@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.p`
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--title-color);
   font-weight: bold;
   opacity: 0.85;
@@ -26,7 +26,7 @@ const Title = styled.p`
 `;
 
 const Content = styled.p`
-  font-size: 0.72rem;
+  font-size: 1rem;
   line-height: 1.75;
   opacity: 0.75;
   margin-bottom: 16px;
@@ -35,10 +35,10 @@ const Content = styled.p`
 `;
 
 const GroomBride = styled.p`
-  font-size: 0.875rem;
+  font-size: 1.1rem;
   line-height: 1.75;
   opacity: 0.85;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   width: 100%;
   text-align: center;
 `;
@@ -53,7 +53,7 @@ const Image = styled.img`
 const Greeting = () => {
   return (
     <Wrapper>
-      <Divider style={{ marginTop: 32, marginBottom: 32 }} plain>
+      <Divider data-aos="fade-up" style={{ marginTop: 32, marginBottom: 32 }} plain>
         <Title data-aos="fade-up">초대합니다</Title>
       </Divider>
       <Image data-aos="fade-up" src={Flower} />
@@ -67,7 +67,10 @@ const Greeting = () => {
         큰 사랑으로 키우고자 합니다.
         <br />
         <br />
-        저희 두 사람이 사랑의 이름으로 지켜나갈 수 있게
+        저희 두 사람이
+        <br />
+        <br />
+        사랑의 이름으로 지켜나갈 수 있게
         <br />
         <br />
         앞날을 축복해 주시면 감사하겠습니다.
@@ -75,7 +78,7 @@ const Greeting = () => {
       <GroomBride data-aos="fade-up">
         {GROOM_MOTHER_NAME}의 차남 {GROOM_NAME}
         <br />
-        {BRIDE_FATHER_NAME} · {BRIDE_MOTHER_NAME}의 장녀 {BRIDE_NAME}
+        {BRIDE_FATHER_NAME}·{BRIDE_MOTHER_NAME}의 장녀 {BRIDE_NAME}
       </GroomBride>
     </Wrapper>
   );

@@ -27,7 +27,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.p`
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--title-color);
   font-weight: bold;
   opacity: 0.85;
@@ -35,14 +35,14 @@ const Title = styled.p`
 `;
 
 const Content = styled.p`
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.75;
   opacity: 0.75;
   margin-bottom: 42px;
 `;
 
 const SubContent = styled.p`
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.75;
   opacity: 0.75;
   margin-bottom: 0! important;
@@ -65,7 +65,7 @@ const ButtonWrap = styled.div`
 const ContactButton = styled.div`
   width: 10.75rem;
   border: 1px solid #efddde;
-  padding: 2.188rem 0;
+  padding: 1.5rem 0;
 `;
 
 const Image = styled.img`
@@ -100,19 +100,19 @@ const CongratulatoryMoney = () => {
       <ButtonWrap>
         <ContactButton data-aos="fade-up" onClick={() => setGroomVisible(true)}>
           <CheckCircleTwoTone
-            style={{ fontSize: 64, marginBottom: 16 }}
+            style={{ fontSize: 32, marginBottom: 16 }}
             twoToneColor="#829fe0"
           />
           <br />
-          <SubContent>신랑측 계좌번호 확인</SubContent>
+          <SubContent>신랑측 계좌번호</SubContent>
         </ContactButton>
         <ContactButton data-aos="fade-up" onClick={() => setBrideVisible(true)}>
           <CheckCircleTwoTone
-            style={{ fontSize: 64, marginBottom: 16 }}
+            style={{ fontSize: 32, marginBottom: 16 }}
             twoToneColor="#fe7daf"
           />
           <br />
-          <SubContent>신부측 계좌번호 확인</SubContent>
+          <SubContent>신부측 계좌번호</SubContent>
         </ContactButton>
       </ButtonWrap>
       <Modal

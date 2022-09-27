@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.span`
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--title-color);
   font-weight: bold;
   opacity: 0.85;
@@ -25,7 +25,7 @@ const Image = styled.img`
 `;
 
 const Content = styled.p`
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.75;
   opacity: 0.75;
   width: 100%;
@@ -47,8 +47,8 @@ const Location = () => {
   const executeScript = () => {
     const scriptTag = document.createElement("script");
     const inlineScript = document.createTextNode(`new daum.roughmap.Lander({
-    "timestamp" : "1664189618487",
-    "key" : "2bu7q",
+    "timestamp" : "1664274429620",
+    "key" : "2busu",
     "mapWidth" : "640",
     "mapHeight" : "360"
   }).render();`);
@@ -99,8 +99,8 @@ const Location = () => {
       </Divider>
       <Image src={Flower} />
       <Map
-          id="daumRoughmapContainer1664189618487"
-           className="root_daum_roughmap root_daum_roughmap_landing"
+          id="daumRoughmapContainer1664274429620"
+          className="root_daum_roughmap root_daum_roughmap_landing"
       ></Map>
       <Content>
         서울 영등포구 국회대로38길 2
@@ -108,19 +108,19 @@ const Location = () => {
         더컨벤션 영등포 1층 그랜드볼룸
         <br />
         <br />
-        <Title>자가용 이용시</Title>
+        <Title>/ 자가용 /</Title>
         <br />
         웨딩홀 지하 주차장 1, 2층
         <br />
         웨딩홀 맞은편 공영주차장 이용 가능
         <br />
         <br />
-        <Title>지하철 이용시</Title>
+        <Title>/ 지하철 /</Title>
         <br />
         2, 5호선 영등포구청역 3번출구 도보 5분
         <br />
         <br />
-        <Title>버스 이용시</Title>
+        <Title>/ 버스 /</Title>
         <br />
         영등포구청역, 영등포경찰서 하차 후 도보이용
         <br />

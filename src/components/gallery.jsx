@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.p`
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--title-color);
   font-weight: bold;
   opacity: 0.85;
@@ -29,7 +29,7 @@ const Title = styled.p`
 const images = [
   {
     original: GalleryPhoto1,
-    thumbnail: GalleryPhoto1,
+    thumbnail: GalleryPhoto1
   },
   {
     original: GalleryPhoto2,
@@ -67,6 +67,7 @@ const Gallery = () => {
         showPlayButton={false}
         showFullscreenButton={false}
         items={images}
+        autoPlay={true}
       />
     </Wrapper>
   );

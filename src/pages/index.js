@@ -22,12 +22,45 @@ import "aos/dist/aos.css";
 const { Footer } = Layout;
 
 const Wrapper = styled.div`
-  background: #FCFCFC;
+  background: #ffffff;
   background-image: url(${GroovePaper});
   width: 100%;
 `;
 
+const AudioDiv = styled.div`
+  position: fixed;
+    bottom: 0;
+  /* width: 100% */
+  right: 0;
+  margin-right: 10px;
+  font-size: 23px
+`;
+
 const IndexPage = () => {
+  const [audioValue, setAudioValue] = React.useState({
+    // Get audio file in a variable
+    audio: new Audio(Song),
+    // Set initial state of song
+    isPlaying: false,
+  });
+
+  // Main function to handle both play and pause operations
+  const playPause = () => {
+    console.log('hi')
+    // Get state of song
+    let isPlaying = audioValue.isPlaying;
+    if (isPlaying) {
+      // Pause the song if it is playing
+      audioValue.audio.pause();
+    } else {
+      // Play the song if it is paused
+      audioValue.audio.play();
+    }
+
+    // Change the state of song
+    setAudioValue({ ...audioValue, isPlaying: !isPlaying });
+  };
+
   useEffect(() => {
     const script = document.createElement("script");
     script.async = true;
@@ -35,7 +68,7 @@ const IndexPage = () => {
     document.body.appendChild(script);
 
     return () => {
-      document.body.romoveChile(script);
+      document.body.removeChild(script);
     };
   }, []);
 
@@ -44,11 +77,13 @@ const IndexPage = () => {
       duration: 1500,
     });
   });
+
   return (
     <Wrapper>
-      <audio autoPlay loop>
-        <source src={Song} />
-      </audio>
+      <title>미현&민석 결혼해요!</title>
+      <AudioDiv onClick={playPause}>
+          {audioValue.isPlaying ? "🎶" : "🔇"}
+      </AudioDiv>
       <Title />
       <Greeting />
       <Gallery />

@@ -7,7 +7,11 @@ import {
   BRIDE_NAME,
 } from "../../config.js";
 import BackgroundVideo from "../assets/BackgroundVideo.mp4";
-import GroovePaper from "../assets/GroovePaper.png";
+import GalleryPhoto0 from "../assets/IMG_4139.jpg";
+import {Divider} from "antd";
+import Flower from "../assets/flower2.png";
+import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
 
 const Layout = styled.div`
   width: 70%;
@@ -49,9 +53,27 @@ const Schedule = styled.p`
   opacity: 0.65;
   margin-bottom: 24px;
 `;
+
+const Image = styled.img`
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+`;
+
+
 const Title = () => {
+  const { width, height } = useWindowSize()
   return (
     <Layout>
+      <Confetti
+          width={width}
+          height={height}
+          numberOfPieces={300}
+          gravity={0.2}
+          colors={['#FFCDD2', '#F8BBD0', '#D1C4E9']}
+          recycle={false}
+          style={{ position: 'fixed' }}
+      />
       <TitleWrapper>
         <WeddingInvitation>WEDDING INVITATION</WeddingInvitation>
         <GroomBride>
@@ -63,9 +85,7 @@ const Title = () => {
           {WEDDING_LOCATION}
         </Schedule>
       </TitleWrapper>
-      <VideoBackground autoPlay loop muted playsInline={true}>
-        <source src={BackgroundVideo} type="video/mp4" />
-      </VideoBackground>
+      <Image src={GalleryPhoto0} />
     </Layout>
   );
 };
