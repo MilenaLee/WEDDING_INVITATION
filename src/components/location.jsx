@@ -40,6 +40,18 @@ const Map = styled.div`
   padding: 0;
 `;
 
+const ButtonWrap = styled.div`
+  margin-bottom: 3.125rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  margin-top: 3px;
+`
+
+const MapButton = styled.div`
+`
+
 const Location = () => {
   // 카카오 맵 불러오기
 
@@ -102,6 +114,21 @@ const Location = () => {
           id="daumRoughmapContainer1664274429620"
           className="root_daum_roughmap root_daum_roughmap_landing"
       ></Map>
+      <ButtonWrap>
+          <a className="flex-1" href="tmap://search?name=더컨벤션영등포">
+            <MapButton className="w-full nes-btn text-ellipsis">티맵</MapButton>
+          </a>
+
+        <Divider type="vertical" />
+        <a className="flex-1" href="tmap://search?name=더빅토리아웨딩파티">
+          <MapButton className="w-full nes-btn text-ellipsis">카카오네비</MapButton>
+        </a>
+
+        <Divider type="vertical" />
+        <a className="flex-1" href="nmap://search?query=더컨벤션%20영등포점;appname=https://minseok-mihyun-wedding.netlify.app/">
+          <MapButton className="w-full nes-btn text-ellipsis">네이버지도</MapButton>
+        </a>
+      </ButtonWrap>
       <Content>
         서울 영등포구 국회대로38길 2
         <br />
