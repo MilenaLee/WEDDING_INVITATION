@@ -39,7 +39,7 @@ const AudioDiv = styled.div`
 const IndexPage = () => {
   const [audioValue, setAudioValue] = React.useState({
     // Get audio file in a variable
-    audio: new Audio(Song),
+    audio: null,
     // Set initial state of song
     isPlaying: false,
   });
@@ -66,6 +66,10 @@ const IndexPage = () => {
     script.async = true;
     script.src = "https://developers.kakao.com/sdk/js/kakao.min.js";
     document.body.appendChild(script);
+
+    if(typeof Audio != "undefined") {
+      audioValue.audio = new Audio(Song)
+    }
 
     return () => {
       document.body.removeChild(script);
