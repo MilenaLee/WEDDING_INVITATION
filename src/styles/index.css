@@ -197,7 +197,7 @@ ul {
 
 .section5-sub {
   line-height: 1.5em;
-  font-size: 1rem;
+  font-size: 0.9rem! important;
 }
 
 .section5-table {
