@@ -93,7 +93,7 @@ const IndexPage = () => {
 <head>
   <title>미현&민석 결혼해요!</title>
       <meta property="og:title" content="미현&민석 결혼해요!">
-        <meta property="og:description" content="2023년 2월 4일 토요일 오후 2시, 더컨벤션 영등 1층 그랜드볼룸">
+        <meta property="og:description" content="2023년 2월 4일 토요일 오후 2시, 더컨벤션 영등포 1층 그랜드볼룸">
 </head>
       <Confetti
           width={1000}
