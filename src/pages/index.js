@@ -20,6 +20,7 @@ import "aos/dist/aos.css";
 import Confetti from "react-confetti";
 import useWindowSize from "react-use/lib/useWindowSize";
 import GalleryTitle from "../components/galleryTitle";
+import {WEDDING_DATE, WEDDING_LOCATION} from "../../config";
 
 // markup
 const { Footer } = Layout;
@@ -98,7 +99,10 @@ const IndexPage = () => {
           recycle={true}
           style={{ position: 'fixed' }}
       />
-      <title>미현&민석 결혼해요!</title>
+      <title>미현&민석 결혼해요!</title>미
+      <description>
+        {WEDDING_DATE},
+        {WEDDING_LOCATION}</description>
       <AudioDiv onClick={playPause}>
           {audioValue.isPlaying ? "🎶" : "🔇"}
       </AudioDiv>

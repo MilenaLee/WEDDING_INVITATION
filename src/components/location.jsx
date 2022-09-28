@@ -56,10 +56,10 @@ const Location = () => {
   const executeScript = () => {
     const scriptTag = document.createElement("script");
     const inlineScript = document.createTextNode(`new daum.roughmap.Lander({
-    "timestamp" : "1664274429620",
-    "key" : "2busu",
+"timestamp" : "1664373274732",
+"key" : "2bv9q",
     "mapWidth" : "1000",
-    "mapHeight" : "500"
+    "mapHeight" : "300"
   }).render();`);
     scriptTag.appendChild(inlineScript);
     document.body.appendChild(scriptTag);
@@ -105,14 +105,13 @@ const Location = () => {
         kakao.init(KAKAOTALK_API_TOKEN);
       }
 
-
-      const container = document.getElementById('map');
-      const options = {
-        center: new kakao.maps.LatLng(33.450701, 126.570667),
-        level: 3
-      };
-
-      const map = kakao.maps.Map(container, options);
+      // const container = document.getElementById('map');
+      // const options = {
+      //   center: kakao.maps.LatLng(33.450701, 126.570667),
+      //   level: 3
+      // };
+      //
+      // const map = kakao.maps.Map(container, options);
     }
   };
 
@@ -146,8 +145,7 @@ const Location = () => {
       </Divider>
       <Image src={Flower} />
       <Map
-          id="daumRoughmapContainer1664274429620"
-          className="root_daum_roughmap root_daum_roughmap_landing"
+          id="daumRoughmapContainer1664373274732" className="root_daum_roughmap root_daum_roughmap_landing"
       ></Map>
       <ButtonWrap>
           <a className="flex-1" href="tmap://search?name=더컨벤션영등포">
