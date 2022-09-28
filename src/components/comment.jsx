@@ -85,19 +85,14 @@ const Comment = () => {
   return (
         <div className="message-container">
         <form onSubmit={handleSubmit}>
+          <input className="message-form-input" type="text"
+                 name="name"
+                 value={formValue.name}
+                 onChange={handleChange} placeholder="이름 입력"/>
           <textarea className="message-form-text" name="message"
                     value={formValue.message}
                     onChange={handleChange} placeholder="축하글을 남겨주세요."/>
-          <div className="message-form-subbox">
-            <input className="message-form-input" type="text"
-                   name="name"
-                   value={formValue.name}
-                   onChange={handleChange} placeholder="이름 입력"/>
-            <input className="message-form-input" type="text"
-                   name="email" value={formValue.email}
-                   onChange={handleChange} hidden/>
             <button className="message-form-button" type="submit" disabled={disabled}>등록하기</button>
-          </div>
         </form>
         <ul className="message-list">
           {messageArray.map((value, index) => (

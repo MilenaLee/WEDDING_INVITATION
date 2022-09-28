@@ -19,6 +19,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Confetti from "react-confetti";
 import useWindowSize from "react-use/lib/useWindowSize";
+import GalleryTitle from "../components/galleryTitle";
 
 // markup
 const { Footer } = Layout;
@@ -33,9 +34,11 @@ const AudioDiv = styled.div`
   position: fixed;
     bottom: 0;
   /* width: 100% */
-  right: 0;
-  margin-right: 10px;
-  font-size: 23px
+  left: 0;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  font-size: 23px;
+  z-index: 1;
 `;
 
 const IndexPage = () => {
@@ -48,7 +51,6 @@ const IndexPage = () => {
 
   // Main function to handle both play and pause operations
   const playPause = () => {
-    console.log('hi')
     // Get state of song
     let isPlaying = audioValue.isPlaying;
     if (isPlaying) {
@@ -102,6 +104,7 @@ const IndexPage = () => {
       </AudioDiv>
       <Title />
       <Greeting />
+      <GalleryTitle />
       <Gallery />
       <Location />
       <Quote />

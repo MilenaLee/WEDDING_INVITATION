@@ -11,19 +11,7 @@ import GalleryPhoto5 from "../assets/5.jpeg";
 import GalleryPhoto6 from "../assets/6.jpeg";
 import GalleryPhoto7 from "../assets/7.jpeg";
 
-const Wrapper = styled.div`
-  padding-top: 42px;
-  width: 70%;
-  margin: 0 auto;
-`;
-
-const Title = styled.p`
-  font-size: 1.2rem;
-  color: var(--title-color);
-  font-weight: bold;
-  opacity: 0.85;
-  margin-bottom: 0;
-  text-align: center;
+const Wrapper = styled.div` 
 `;
 
 const images = [
@@ -60,14 +48,13 @@ const images = [
 const Gallery = () => {
   return (
     <Wrapper>
-      <Divider style={{ marginTop: 0, marginBottom: 32 }} plain>
-        <Title>우리의 아름다운 순간</Title>
-      </Divider>
       <ImageGallery
         showPlayButton={false}
         showFullscreenButton={false}
         items={images}
         autoPlay={true}
+        slideInterval={6000}
+        height="100%"
       />
     </Wrapper>
   );

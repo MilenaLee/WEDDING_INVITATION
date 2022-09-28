@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import { Divider } from "antd";
+import { Divider, Button } from "antd";
 import styled from "styled-components";
 import Flower from "../assets/flower2.png";
+import {KAKAOTALK_API_TOKEN} from "../../config";
 
 const Wrapper = styled.div`
   padding-top: 42px;
-  width: 70%;
   margin: 0 auto;
 `;
 
@@ -41,15 +41,12 @@ const Map = styled.div`
 `;
 
 const ButtonWrap = styled.div`
-  margin-bottom: 3.125rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   text-align: center;
-  margin-top: 3px;
-`
-
-const MapButton = styled.div`
+  margin-top: 1.5rem;
+  margin-bottom: 0.2rem;
 `
 
 const Location = () => {
@@ -61,8 +58,8 @@ const Location = () => {
     const inlineScript = document.createTextNode(`new daum.roughmap.Lander({
     "timestamp" : "1664274429620",
     "key" : "2busu",
-    "mapWidth" : "640",
-    "mapHeight" : "360"
+    "mapWidth" : "1000",
+    "mapHeight" : "500"
   }).render();`);
     scriptTag.appendChild(inlineScript);
     document.body.appendChild(scriptTag);
@@ -98,7 +95,45 @@ const Location = () => {
         executeScript();
       };
     })();
+
+    if (window.Kakao) {
+      const kakao = window.Kakao;
+
+      // 중복 initialization 방지
+      if (!kakao.isInitialized()) {
+        // 두번째 step 에서 가져온 javascript key 를 이용하여 initialize
+        kakao.init(KAKAOTALK_API_TOKEN);
+      }
+
+
+      const container = document.getElementById('map');
+      const options = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667),
+        level: 3
+      };
+
+      const map = kakao.maps.Map(container, options);
+    }
   };
+
+  const createKakaoNavi = () => {
+    if (window.Kakao) {
+      const kakao = window.Kakao;
+
+      // 중복 initialization 방지
+      if (!kakao.isInitialized()) {
+        // 두번째 step 에서 가져온 javascript key 를 이용하여 initialize
+        kakao.init(KAKAOTALK_API_TOKEN);
+      }
+
+      kakao.Navi.start({
+        name: "더컨벤션 영등포",
+        x: 37.52667926188189,
+          y: 126.89874311093499,
+          coordType: 'wgs84'
+    });
+    }
+  }
 
   useEffect(() => {
     InstallScript();
@@ -106,7 +141,7 @@ const Location = () => {
 
   return (
     <Wrapper>
-      <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
+      <Divider plain style={{ marginTop: 20, marginBottom: 32 }}>
         <Title>오시는 길</Title>
       </Divider>
       <Image src={Flower} />
@@ -116,17 +151,16 @@ const Location = () => {
       ></Map>
       <ButtonWrap>
           <a className="flex-1" href="tmap://search?name=더컨벤션영등포">
-            <MapButton className="w-full nes-btn text-ellipsis">티맵</MapButton>
+            <Button style={{width: '7rem'}}>티맵 네비</Button>
           </a>
-
         <Divider type="vertical" />
-        <a className="flex-1" href="tmap://search?name=더빅토리아웨딩파티">
-          <MapButton className="w-full nes-btn text-ellipsis">카카오네비</MapButton>
+        <a className="flex-1" onClick={createKakaoNavi}>
+          <Button style={{width: '7rem'}}>카카오 네비</Button>
         </a>
 
         <Divider type="vertical" />
-        <a className="flex-1" href="nmap://search?query=더컨벤션%20영등포점;appname=https://minseok-mihyun-wedding.netlify.app/">
-          <MapButton className="w-full nes-btn text-ellipsis">네이버지도</MapButton>
+        <a className="flex-1" href="nmap://search?query=%EB%8D%94%EC%BB%A8%EB%B2%A4%EC%85%98%20%EC%98%81%EB%93%B1%ED%8F%AC%EC%A0%90&appname=https://minseok-mihyun-wedding.netlify.app/">
+          <Button style={{width: '7rem'}}>네이버 지도</Button>
         </a>
       </ButtonWrap>
       <Content>

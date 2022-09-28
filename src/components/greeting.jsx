@@ -13,7 +13,6 @@ import Flower from "../assets/flower1.png";
 const Wrapper = styled.div`
   padding-top: 42px;
   margin: 0 auto;
-  width: 70%;
 `;
 
 const Title = styled.p`
@@ -29,18 +28,21 @@ const Content = styled.p`
   font-size: 1rem;
   line-height: 1.75;
   opacity: 0.75;
-  margin-bottom: 24px;
+  margin-bottom: 34px;
   width: 100%;
   text-align: center;
+  color: var(--title-color);
 `;
 
 const GroomBride = styled.p`
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.75;
   opacity: 0.85;
   margin-bottom: 10px;
+  font-weight: bold;
   width: 100%;
   text-align: center;
+  color: var(--title-color);
 `;
 
 const Image = styled.img`
@@ -58,19 +60,19 @@ const Greeting = () => {
       </Divider>
       <Image data-aos="fade-up" src={Flower} />
       <Content data-aos="fade-up">
-        서로 마주 보며 다져온 사랑을
+        어제의 너와 내가
         <br />
         <br />
-        이제 함께 한곳을 바라보며 걸어갈 수 있는
+        오늘 우리가 되어
         <br />
         <br />
-        큰 사랑으로 키우고자 합니다.
+        저희 두 사람 이제
         <br />
         <br />
-        저희 두 사람이
+        한 길을 같이 걷고자 합니다.
         <br />
         <br />
-        사랑의 이름으로 지켜나갈 수 있게
+        저희 첫 디딤에 부디 오시어
         <br />
         <br />
         앞날을 축복해 주시면 감사하겠습니다.

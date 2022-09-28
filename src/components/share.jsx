@@ -16,6 +16,7 @@ const Wrapper = styled.div`
   padding-top: 32px;
   width: 100%;
   text-align: center;
+  z-index: 2;
 `;
 
 const Title = styled.span`
