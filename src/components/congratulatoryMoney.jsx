@@ -68,8 +68,8 @@ const CongratulatoryMoney = () => {
       >
         <Title>마음 전하실 곳</Title>
       </Divider>
-      <Image src={Flower} />
       <Content data-aos="fade-up">
+<Image src={Flower} />
         참석이 어려우신 분들을 위해
         <br />
         계좌번호를 기재하였습니다.
