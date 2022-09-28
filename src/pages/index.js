@@ -99,10 +99,9 @@ const IndexPage = () => {
           recycle={true}
           style={{ position: 'fixed' }}
       />
-      <title>미현&민석 결혼해요!</title>미
-      <description>
-        {WEDDING_DATE},
-        {WEDDING_LOCATION}</description>
+      <title>미현&민석 결혼해요!</title>
+      <meta property="og:title" content="미현&민석 결혼해요!">
+        <meta property="og:description" content="2023년 2월 4일 토요일 오후 2시, 더컨벤션 영등 1층 그랜드볼룸">
       <AudioDiv onClick={playPause}>
           {audioValue.isPlaying ? "🎶" : "🔇"}
       </AudioDiv>
