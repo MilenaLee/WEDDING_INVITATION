@@ -123,9 +123,12 @@ content="2023년 2월 4일 토요일 오후 2시,
           backgroundImage: `url(${GroovePaper})`,
           opacity: 0.6,
           textAlign: "center",
+          fontSize: "0.7rem"
         }}
       >
-        Copyright © 2022 Shin Jooyoung
+        © 2022 Original template by Shin Jooyoung
+        <br />
+        + Custom by Mihyun aka DJS
       </Footer>
     </Wrapper>
   );
