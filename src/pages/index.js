@@ -29,6 +29,8 @@ const Wrapper = styled.div`
   background: #ffffff;
   background-image: url(${GroovePaper});
   width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 `;
 
 const AudioDiv = styled.div`
