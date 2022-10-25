@@ -41,14 +41,7 @@ const Quote = () => {
       <Content data-aos="fade-up">
         <br />
         <br />
-        장담하건대. 세상이 다 겨울이어도
-        <br />
-        우리 사랑은 늘봄처럼 따뜻하고
-        <br />
-        간혹, 여름처럼 뜨거울 겁니다
-        <br />
-        <br />
-        - 이수동, (사랑가) -
+      You and I, the best moment is yet to come
         <br />
         <br />
       </Content>
