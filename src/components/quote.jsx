@@ -41,7 +41,7 @@ const Quote = () => {
       <Content data-aos="fade-up">
         <br />
         <br />
-      You and I, the best moment is yet to come
+      You and I, the best moment is yet to come.
         <br />
         <br />
       </Content>
