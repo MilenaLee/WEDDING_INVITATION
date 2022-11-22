@@ -69,13 +69,15 @@ const Share = () => {
         kakao.init(KAKAOTALK_API_TOKEN);
       }
 
+      const randomValue = KAKAOTALK_SHARE_IMAGE[Math.floor(Math.random() * KAKAOTALK_SHARE_IMAGE.length)];
+
       kakao.Link.createDefaultButton({
         objectType: "feed",
         container: "#sendKakao",
         content: {
           title: `${GROOM_NAME}❤${BRIDE_NAME} 결혼식에 초대합니다`,
           description: "2023년 2월 4일 토요일 오후 2시 더컨벤션 영등포🤵👰",
-          imageUrl: KAKAOTALK_SHARE_IMAGE,
+          imageUrl: randomValue,
           link: {
             mobileWebUrl: window.location.href,
             webUrl: window.location.href,
