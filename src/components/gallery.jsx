@@ -11,6 +11,17 @@ import GalleryPhoto5 from "../assets/5.jpeg";
 import GalleryPhoto6 from "../assets/6.jpeg";
 import GalleryPhoto7 from "../assets/7.jpeg";
 
+import GalleryPhoto8 from "../assets/8.jpg";
+import GalleryPhoto9 from "../assets/9.jpg";
+import GalleryPhoto10 from "../assets/10.jpg";
+import GalleryPhoto11 from "../assets/11.jpg";
+import GalleryPhoto12 from "../assets/12.jpg";
+import GalleryPhoto13 from "../assets/13.jpg";
+import GalleryPhoto14 from "../assets/14.jpg";
+import GalleryPhoto15 from "../assets/15.jpg";
+import GalleryPhoto16 from "../assets/16.jpg";
+
+
 const Wrapper = styled.div` 
 `;
 
@@ -42,6 +53,42 @@ const images = [
   {
     original: GalleryPhoto7,
     thumbnail: GalleryPhoto7,
+  },
+  {
+    original: GalleryPhoto8,
+    thumbnail: GalleryPhoto8,
+  },
+  {
+    original: GalleryPhoto9,
+    thumbnail: GalleryPhoto9,
+  },
+  {
+    original: GalleryPhoto10,
+    thumbnail: GalleryPhoto10,
+  },
+  {
+    original: GalleryPhoto11,
+    thumbnail: GalleryPhoto11,
+  },
+  {
+    original: GalleryPhoto12,
+    thumbnail: GalleryPhoto12,
+  },
+  {
+    original: GalleryPhoto13,
+    thumbnail: GalleryPhoto13,
+  },
+  {
+    original: GalleryPhoto14,
+    thumbnail: GalleryPhoto14,
+  },
+  {
+    original: GalleryPhoto15,
+    thumbnail: GalleryPhoto15,
+  },
+  {
+    original: GalleryPhoto16,
+    thumbnail: GalleryPhoto16,
   },
 ];
 
