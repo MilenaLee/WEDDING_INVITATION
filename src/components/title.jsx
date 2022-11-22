@@ -27,10 +27,6 @@ const TitleWrapper = styled.div`
   -o-animation: fadein 3s; /* Opera */
 `;
 
-const VideoBackground = styled.video`
-  width: 100%;
-`;
-
 const WeddingInvitation = styled.p`
   font-size: 0.825rem;
   opacity: 0.45;

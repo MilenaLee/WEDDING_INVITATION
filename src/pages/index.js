@@ -15,12 +15,12 @@ import Share from "../components/share";
 import Quote from "../components/quote";
 import Song from "../assets/song.mp3";
 
+import { Helmet } from "react-helmet"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Confetti from "react-confetti";
 import useWindowSize from "react-use/lib/useWindowSize";
 import GalleryTitle from "../components/galleryTitle";
-import {WEDDING_DATE, WEDDING_LOCATION} from "../../config";
 
 // markup
 const { Footer } = Layout;
@@ -89,16 +89,14 @@ const IndexPage = () => {
     });
   });
 
-  const { width, height } = useWindowSize()
+  // const { width, height } = useWindowSize()
   return (
     <Wrapper>
-<head>
-  <title>미현&민석 결혼해요!</title>
-      <meta property="og:title" content="미현&민석 결혼해요!"/>
-        <meta property="og:description" 
-content="2023년 2월 4일 토요일 오후 2시, 
-더컨벤션 영등포 1층 그랜드볼룸"/>
-</head>
+      <Helmet>
+        <title>미현&민석 결혼해요!</title>
+        <meta property="og:title" content="미현&민석 결혼해요!"/>
+        <meta property="og:description" content="2023년 2월 4일 토요일 오후 2시, 더컨벤션 영등포 1층 그랜드볼룸"/>
+      </Helmet>
       <Confetti
           width={1000}
           height={1000}
