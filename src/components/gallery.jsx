@@ -76,6 +76,7 @@ const Gallery = () => {
         autoPlay={true}
         slideInterval={6000}
         height="100%"
+        lazyLoad={true}
       />
     </Wrapper>
   );
