@@ -21,6 +21,7 @@ import "aos/dist/aos.css";
 import Confetti from "react-confetti";
 import useWindowSize from "react-use/lib/useWindowSize";
 import GalleryTitle from "../components/galleryTitle";
+import {KAKAOTALK_SHARE_IMAGE} from "../../config";
 
 // markup
 const { Footer } = Layout;
@@ -89,13 +90,18 @@ const IndexPage = () => {
     });
   });
 
+  const randomValue = KAKAOTALK_SHARE_IMAGE[Math.floor(Math.random() * KAKAOTALK_SHARE_IMAGE.length)];
   // const { width, height } = useWindowSize()
   return (
     <Wrapper>
+      <title>미현&민석 결혼해요!</title>
       <Helmet>
         <title>미현&민석 결혼해요!</title>
-        <meta property="og:title" content="미현&민석 결혼해요!"/>
-        <meta property="og:description" content="2023년 2월 4일 토요일 오후 2시, 더컨벤션 영등포 1층 그랜드볼룸"/>
+        <meta name="title" property="og:title" content="미현&민석 결혼해요!"/>
+        <meta name="description" property="og:description" content="2023년 2월 4일 토요일 오후 2시, 더컨벤션 영등포 1층 그랜드볼룸"/>
+        <meta name="type" property="og:type" content="website" />
+        <meta name="url" property="og:url" content="https://minseok-mihyun-wedding.netlify.app/" />
+        <meta name="image" property="og:image" content={randomValue} />
       </Helmet>
       <Confetti
           width={1000}
