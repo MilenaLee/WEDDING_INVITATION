@@ -6,7 +6,24 @@ import {
   GROOM_NAME,
   BRIDE_NAME,
 } from "../../config.js";
-import GalleryPhoto0 from "../assets/IMG_4139.jpg";;
+import GalleryPhoto0 from "../assets/IMG_4139.jpg";
+
+import GalleryPhoto2 from "../assets/2.jpeg";
+import GalleryPhoto3 from "../assets/3.jpeg";
+import GalleryPhoto7_1 from "../assets/7_1.jpg";
+import GalleryPhoto8_2 from "../assets/8_2.jpg";
+import GalleryPhoto8_3 from "../assets/8_3.jpg";
+import GalleryPhoto8_4 from "../assets/8_4.jpg";
+
+import GalleryPhoto8_6 from "../assets/8_6.png";
+import GalleryPhoto8_7 from "../assets/8_7.jpg";
+import GalleryPhoto8_9 from "../assets/8_9.jpg";
+import GalleryPhoto8_10 from "../assets/8_10.jpg";
+import GalleryPhoto8 from "../assets/8.jpg";
+import GalleryPhoto10 from "../assets/10.jpg";
+import GalleryPhoto11 from "../assets/11.jpg";
+import GalleryPhoto15 from "../assets/15.jpg";
+import {KAKAOTALK_SHARE_IMAGE} from "../../config";
 
 
 const Layout = styled.div`
@@ -54,6 +71,9 @@ const Image = styled.img`
 
 
 const Title = () => {
+  const photo = [GalleryPhoto0, GalleryPhoto2, GalleryPhoto3, GalleryPhoto7_1, GalleryPhoto8_2, GalleryPhoto8_3, GalleryPhoto8_4, GalleryPhoto8_6, GalleryPhoto8_7, GalleryPhoto8_9, GalleryPhoto8_10, GalleryPhoto8, GalleryPhoto10, GalleryPhoto11, GalleryPhoto15];
+  const randomValue = photo[Math.floor(Math.random() * photo.length)];
+
   return (
     <Layout>
       <TitleWrapper>
@@ -67,7 +87,7 @@ const Title = () => {
           {WEDDING_LOCATION}
         </Schedule>
       </TitleWrapper>
-      <Image src={GalleryPhoto0} />
+      <Image src={randomValue} />
     </Layout>
   );
 };
