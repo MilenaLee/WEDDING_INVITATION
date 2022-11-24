@@ -14,12 +14,12 @@ export const WEDDING_DATE = "2023년 2월 4일 토요일 오후 2시";
 export const WEDDING_LOCATION = "더컨벤션 영등포점 1층 그랜드볼룸";
 
 export const GROOM_NAME = "김민석";
-export const GROOM_ACCOUNT_NUMBER = "○○은행 ***-***-******";
+export const GROOM_ACCOUNT_NUMBER = "토스뱅크 1000-3018-3832";
 export const GROOM_MOTHER_NAME = "조옹연";
 export const GROOM_MOTHER_ACCOUNT_NUMBER = "○○은행 ***-***-******";
 
 export const BRIDE_NAME = "이미현";
-export const BRIDE_ACCOUNT_NUMBER = "토스 1000-0004-5891";
+export const BRIDE_ACCOUNT_NUMBER = "토스뱅크 1000-0004-5891";
 export const BRIDE_FATHER_NAME = "이성우";
 export const BRIDE_FATHER_ACCOUNT_NUMBER = "우리은행 ***-***-******";
 export const BRIDE_MOTHER_NAME = "김수정";
