@@ -43,7 +43,6 @@ const images = [
   { original: GalleryPhoto8_1, thumbnail: GalleryPhoto8_1},
   { original: GalleryPhoto8_2, thumbnail: GalleryPhoto8_2},
   { original: GalleryPhoto8_3, thumbnail: GalleryPhoto8_3},
-  { original: GalleryPhoto8_4, thumbnail: GalleryPhoto8_4},
   { original: GalleryPhoto8_6, thumbnail: GalleryPhoto8_6},
   { original: GalleryPhoto8_7, thumbnail: GalleryPhoto8_7},
   { original: GalleryPhoto8_10, thumbnail: GalleryPhoto8_10},
