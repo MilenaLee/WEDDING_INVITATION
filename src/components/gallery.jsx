@@ -19,7 +19,6 @@ import GalleryPhoto8_4 from "../assets/8_4.jpg";
 import GalleryPhoto8_5 from "../assets/8_5.jpg";
 import GalleryPhoto8_6 from "../assets/8_6.png";
 import GalleryPhoto8_7 from "../assets/8_7.jpg";
-import GalleryPhoto8_8 from "../assets/8_8.png";
 import GalleryPhoto8_9 from "../assets/8_9.jpg";
 import GalleryPhoto8_10 from "../assets/8_10.jpg";
 import GalleryPhoto8 from "../assets/8.jpg";
@@ -52,7 +51,6 @@ const images = [
   { original: GalleryPhoto8_5, thumbnail: GalleryPhoto8_5},
   { original: GalleryPhoto8_6, thumbnail: GalleryPhoto8_6},
   { original: GalleryPhoto8_7, thumbnail: GalleryPhoto8_7},
-  { original: GalleryPhoto8_8, thumbnail: GalleryPhoto8_8},
   { original: GalleryPhoto8_9, thumbnail: GalleryPhoto8_9},
   { original: GalleryPhoto8_10, thumbnail: GalleryPhoto8_10},
   { original: GalleryPhoto8,    thumbnail: GalleryPhoto8,  },
