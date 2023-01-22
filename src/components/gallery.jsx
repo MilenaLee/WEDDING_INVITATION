@@ -32,6 +32,10 @@ import GalleryPhoto16 from "../assets/16.jpg";
 const Wrapper = styled.div` 
 `;
 
+const Div = styled.div`
+margin-top: 3px;
+`;
+
 const images = [
   { original: GalleryPhoto1,    thumbnail: GalleryPhoto1  },
   { original: GalleryPhoto2,    thumbnail: GalleryPhoto2,  },
@@ -69,6 +73,13 @@ const Gallery = () => {
         height="100%"
         lazyLoad={true}
       />
+      <Div/>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DNr2LO1b_50" title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen></iframe>
+      </div>
     </Wrapper>
   );
 };

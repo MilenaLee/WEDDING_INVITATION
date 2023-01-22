@@ -2,6 +2,7 @@ export const WEDDING_INVITATION_URL = "https://minseok-mihyun-wedding.netlify.ap
 
 export const KAKAOTALK_SHARE_IMAGE = [
   "https://raw.githubusercontent.com/MilenaLee/WEDDING_INVITATION/main/src/assets/1.jpeg",
+    "https://raw.githubusercontent.com/MilenaLee/WEDDING_INVITATION/main/src/assets/2.jpeg",
    "https://raw.githubusercontent.com/MilenaLee/WEDDING_INVITATION/main/src/assets/7.jpeg",
 "https://raw.githubusercontent.com/MilenaLee/WEDDING_INVITATION/main/src/assets/9.jpg",
 "https://raw.githubusercontent.com/MilenaLee/WEDDING_INVITATION/main/src/assets/12.jpg",
